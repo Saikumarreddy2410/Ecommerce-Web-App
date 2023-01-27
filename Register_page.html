@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  />
+    <link rel="stylesheet" href="Auth.css">
+    <title>signUp</title>
+</head>
+<body>
+
+    <section class="registerform">
+
+        <div class="registercon">
+            <div class="registerheader">
+                <h2 class="logo">Fashion</h2>
+                <h3>Create account</h3>
+            </div>
+            <form action="" class="formpage">
+                <div class="form_control ">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="First and last name">
+                    <i class="fa fa-xmark"></i>
+                    <i class="fa fa-circle-check"></i>  
+                    <small class="small userError"></small>                
+                </div>
+
+                <div class="form_control ">
+                    <label>Email</label>
+                    <input type="email" id="email" >
+                    <i class="fa fa-xmark"></i>
+                    <i class="fa fa-circle-check"></i>  
+                    <small class="small emailError"></small>               
+                </div>
+
+                <div class="form_control">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="At least 6 characters" >
+                    <i class="fa fa-xmark"></i>
+                    <i class="fa fa-circle-check"></i>  
+                    <small class="small passwordError"></small>                
+                </div>
+
+                <div class="form_control">
+                    <label>Confirm Password</label>
+                    <input type="password" id="cpassword" >
+                    <i class="fa fa-xmark"></i>
+                    <i class="fa fa-circle-check "></i>  
+                    <small class="small conformError"></small>              
+                </div>
+                <button id="registerbtn">Submit</button>
+                <p class="conditions">By creating an account, you agree to Fashion's <br> <a href="">Conditions of use</a> and <a href="">Privacy Notice.</a></p><br>
+                <p class="resign">Already have an account? <a href="loginpage.html">Sign in</a></p>
+
+            </form>
+
+        </div>
+
+    </section>
+    
+    <script src="Auth.js"></script>
+
+</body>
+</html>
+
+

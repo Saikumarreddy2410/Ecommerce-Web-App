@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  />
+    <link rel="stylesheet" href="Ecommerce.css">
+    <title>E-commerce</title>
+
+    
+
+</head>
+<body>
+    
+    <navbar id="header" class="section">
+       <div class="logo">
+        <a href="Ecommerce.html" ><strong>Fashion</strong></a>
+       </div>
+       <div class="navbar_icons" >
+        <ul id="hash">
+            <li><a href="Ecommerce.html">Home</a></li>
+            <li><a class="active" href="Shop.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a class="bag" href="Cart.html"><i class="fa fa-bag-shopping"></i></a></li>
+            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+
+        </ul>
+       </div>
+       <div class="mobile">
+        <a href="Cart.html"><i class="fa fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </navbar>
+
+     <section id="shp_header" class="section">
+        <h2># Stayhome</h2>
+        <p>Save more with coupons & up to 70% off ! </p>
+    </section> -->
+
+    <section id="product1" class="section">
+
+        <div class="pro_container shopItemsCon" id="shopItems">
+        </div>
+
+    </section>
+
+
+     <section id="shp_nav" class="section">
+        <div class="shp_links">
+            <a href="#">1</a>     
+            <a href="#">2</a>     
+            <a href="#"><i class="fa fa-long-arrow-alt-right"></i></a>   
+         </div>
+    </section> 
+
+     <section id="sign_up" class="section">
+        <div class="sign_up_det">
+            <h3>Sign Up For Newsletters</h3>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div id="sign_up_box">
+            <input type="email" placeholder="Your email address">
+            <button class="sign">Sign Up</button>
+        </div>
+    </section>
+
+    <footer id="footer" class="section">
+
+        <div class="address logo">
+            <a href="Ecommerce.html" ><strong>Fashion</strong></a>
+            <h4>Contact</h4>
+            <p><strong>Address : </strong>39-1-57, MG Road, Mogalarajapuram, Vijayawada-10.</p>
+            <p><strong>Phone : </strong> +91 96039 08303</p>
+            <p><strong>Hours : </strong>10:00 - 18:00, Mon - Fri</p>
+
+            <div class="follow">
+                <h4><strong>Follow Us</strong></h4>
+                <div class="social_links">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="about">
+                    <h4><strong>About</strong></h4>
+                    <a href="#">About us</a>
+                    <a href="#">Delivery Information</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact us</a>
+         </div>
+        
+        <div class="my_account">
+                    <h4><strong>My Account</strong></h4>
+                    <a href="#">Sign In</a>
+                    <a href="#">View Cart</a>
+                    <a href="#">My Wishlist</a>
+                    <a href="#">Track My Order</a>
+                    <a href="#">Help</a>
+        </div>
+       
+
+        <div class="install_app">
+            <h4><strong>Install App</strong></h4>
+            <p>From App Store or Google Play</p>
+            <div class="app_links">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copywrite">
+            <p>© 2022, Tech2 etc - HTML CSS Ecommerce Template </p>
+        </div>
+
+    </footer> 
+
+     <script type="module" src="./Ecommerce.js"></script> 
+     <script type="module">
+
+        import {productsArray} from "./newArrival-Products.js"
+
+        let shopItemsContainer = document.getElementById('shopItems')
+
+        productsArray.forEach(ele => {
+  let {productId, productImg, productBrand, productName, productPrice} = ele;
+  return (shopItemsContainer.innerHTML += `
+
+        <div id=${productId} class='pro'>
+                <img class="image" src=${productImg} onClick="window.location.href='Singlepro.html';">
+                <div id="pro_des">
+                    <p class="brand">${productBrand}</p>
+                    <h5 class="name">${productName}</h5>   
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                
+                </div>
+                <div class="price">
+                    <h4 class="itemPrice">$ ${productPrice}</h4>
+                    <a ><i  data-id=${productId}  class="fa fa-shopping-cart addToCart"  ></i></a>
+                </div>
+        </div>` )
+
+});
+
+    </script>
+
+</body>
+</html>

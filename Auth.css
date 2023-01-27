@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    font-family: sans-serif;
+}
+
+#loginbody{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0;
+    text-align: center;
+}
+
+.loginheader h2,.registerheader .logo{
+    font-family: 'Lobster', cursive;
+    font-size:36px;
+    text-decoration: none;
+}
+
+
+.loginleft{
+    width:450px;
+    height: 550px;
+    border: 1px solid #eae7e7;
+     padding:1% 5% 3% 0 ; 
+
+}
+
+
+.loginheader h4{
+    margin-top:5%;
+    font-size: 20px;
+}
+.loginheader p{
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.logindetails .logindetailstext, .loginbtn,
+.google,.facebook,.apple {
+    padding:10px;
+    width: 250px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 13px;
+    border:1px solid #eae7e7;
+    
+}
+.logindetails input:focus{
+    outline: none;
+    border:1px solid orange;
+    box-shadow: 0 0 3px rgb(206, 136, 6);
+}
+
+.logindetails .loginbtn,
+.registercon #registerbtn{
+    background: #12c0b4;
+    color:#fff;
+    font-size: 13px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logindetails .loginbtn:hover,
+.registercon #registerbtn:hover{
+    color:#1abdb2;
+    background: #fff;
+    border:1px solid #1abdb2;
+}
+
+.logindetails .or{
+   font-size: 12px;
+   width:100%;
+   border-bottom:1px solid #eae7e7;
+   line-height: 0.1em;
+   margin: 10px 20px 20px;
+   text-align: center;
+}
+
+.logindetails .or span{
+    background: #fff;
+    padding:0 10px
+}
+#loginlinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loginlinks .google, .facebook, .apple{
+    background: transparent;
+    font-weight: bolder;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#loginlinks .loginbtn:hover{
+    background: rgb(242, 241, 241);
+}
+
+#loginlinks img{
+    width: 20px;
+    margin-right: 8px;  
+}
+
+#loginlinks p{
+    font-size: 13px;
+    font-weight: 100;
+}
+
+#loginlinks p a{
+    text-decoration: none;
+    color:coral;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+
+.loginright {
+    width:450px;
+    height: 550px;
+   
+}
+.loginimg{
+    width:100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left:-25px;
+    overflow: hidden;
+}
+
+/* Register Page */
+
+.registerform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.registercon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    width:400px;
+    border: 1px solid rgb(230, 226, 226);
+    margin:2rem 0;
+    padding: 1rem 0;
+    background-color: #eaebe9b7;
+    border-radius: 5px;
+}
+
+.registerheader h2{
+    text-align: center;
+    
+}
+
+.registerheader h3{
+    font-size: 1.8rem;
+    margin:1rem 0;
+}
+
+.form_control{
+    position: relative;
+}
+
+.form_control label{
+    display: inline-block;
+    font-size: 14px;
+    padding:5px 0
+
+}
+.form_control input, #registerbtn{
+    display: block;
+    width:100%;
+    padding:10px;
+    border:1px solid #eae7e7;
+    border-radius: 5px;
+}
+
+.form_control input:focus{
+    outline: none;
+    border-color: #999;
+}
+.form_control i{
+    position: absolute;
+    right:10px;
+    top: 35px;
+    visibility: hidden;
+}
+.form_control small{
+    font-size: 12px;
+    padding:2px 0;
+    left: 0;
+    visibility: hidden;
+    color:#e74c3c
+}
+
+.form_control.error input{
+    border-color: #e74c3c;
+
+}
+.form_control.success input {
+    border-color:#2ecc71;
+}
+
+.form_control.success i.fa-circle-check {
+    color:#2ecc71;
+    visibility: visible;
+}
+.form_control.error i.fa-xmark{
+    color:#e74c3c;
+    visibility: visible;
+}
+
+.form_control.error small{
+    color:#e74c3c;
+    visibility: visible;
+    margin:.5rem 0rem;
+    display: inline-block;
+    font-weight: 500;
+}
